@@ -9,7 +9,7 @@ name = "Terraform_VPC"
   azs             = ["us-east-1a", "us-east-1b"]
   public_subnets  = ["10.0.1.0/24", "10.0.2.0/24"]
   private_subnets = ["10.0.3.0/24", "10.0.4.0/24"]
-  # To assign Auto-assigned IP address to EC2 instances in public subnets
+  # To Auto-assign public IP address to EC2 instances in public subnets
   map_public_ip_on_launch = true 
   
   # DNS options are checked automatically when creating VPC manually
