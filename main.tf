@@ -57,8 +57,8 @@ resource "aws_instance" "web_server2" {
   subnet_id     = module.vpc.public_subnets[1] #get the second public subnet from the VPC module
   vpc_security_group_ids = [aws_security_group.Webserver_SG.id] #attach the Webserver_SG to the EC2 instance
   
-  user_data     = file("${path.module}/install_httpd.sh") #execute the install_httpd.sh script to install Apache HTTP Server on the EC2 instance
-
+  #user_data     = file("${path.module}/install_httpd.sh") #execute the install_httpd.sh script to install Apache HTTP Server on the EC2 instance
+  user_data     = file("install_httpd.sh") #execute the install_httpd.sh script to install Apache HTTP Server on the EC2 instance
   tags = {
     Name = var.instance2_name
   }
