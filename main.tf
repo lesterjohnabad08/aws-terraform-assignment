@@ -41,7 +41,7 @@ provider "aws" {
 resource "aws_instance" "web_server1" {
   ami           = "ami-05024c2628f651b80"
   instance_type = "t2.micro"
-  subnet_id = module.vpc.public_subnets[0] #get the first public subnet from the VPC module
+  subnet_id     = module.vpc.public_subnets[0] #get the first public subnet from the VPC module
   vpc_security_group_ids = [aws_security_group.Webserver_SG.id] #attach the Webserver_SG to the EC2 instance
   
   user_data     = file("${path.module}/install_httpd.sh") #execute the install_httpd.sh script to install Apache HTTP Server on the EC2 instance
@@ -54,7 +54,7 @@ resource "aws_instance" "web_server1" {
 resource "aws_instance" "web_server2" {
   ami           = "ami-05024c2628f651b80"
   instance_type = "t2.micro"
-  subnet_id = module.vpc.public_subnets[1] #get the second public subnet from the VPC module
+  subnet_id     = module.vpc.public_subnets[1] #get the second public subnet from the VPC module
   vpc_security_group_ids = [aws_security_group.Webserver_SG.id] #attach the Webserver_SG to the EC2 instance
   
   user_data     = file("${path.module}/install_httpd.sh") #execute the install_httpd.sh script to install Apache HTTP Server on the EC2 instance
