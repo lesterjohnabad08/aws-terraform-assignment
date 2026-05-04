@@ -2,6 +2,7 @@
 
 ### Some resources I used to finish this assignment.
 
+https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/latest
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_subnet_group
